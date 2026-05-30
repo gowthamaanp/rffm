@@ -1,0 +1,60 @@
+{
+  "feature_names": [
+    "wavelet-HL_gldm_LargeDependenceHighGrayLevelEmphasis",
+    "squareroot_glrlm_GrayLevelNonUniformityNormalized",
+    "original_glcm_SumSquares",
+    "logarithm_glcm_SumEntropy",
+    "gradient_firstorder_Maximum",
+    "square_glszm_SizeZoneNonUniformity",
+    "exponential_glszm_SizeZoneNonUniformityNormalized",
+    "square_firstorder_Kurtosis",
+    "logarithm_firstorder_RobustMeanAbsoluteDeviation"
+  ],
+  "feature_groups": {
+    "sharpness": {
+      "gradient_firstorder_Maximum": 4
+    },
+    "artifacts": {
+      "wavelet-HL_gldm_LargeDependenceHighGrayLevelEmphasis": 0
+    },
+    "texture": {
+      "squareroot_glrlm_GrayLevelNonUniformityNormalized": 1,
+      "original_glcm_SumSquares": 2,
+      "logarithm_glcm_SumEntropy": 3,
+      "exponential_glszm_SizeZoneNonUniformityNormalized": 6,
+      "square_glszm_SizeZoneNonUniformity": 5
+    },
+    "intensity": {
+      "square_firstorder_Kurtosis": 7,
+      "logarithm_firstorder_RobustMeanAbsoluteDeviation": 8
+    }
+  },
+  "feature_weights": [
+      0.0018964125087837576,
+      0.0380562315202523,
+      0.7349556405887395,
+      0.08317261891686877,
+      0.033099596119713,
+      0.004592145278653624,
+      0.0023611893498799576,
+      0.009381057393181486,
+      0.0924851083239093
+  ],
+  "d_ref": [
+      0.9246768295417687,
+      0.23800405080183692,
+      0.05595274316878816,
+      0.15391727546514639,
+      0.7019678700750466,
+      0.9890383033547441,
+      0.9019569858554028,
+      0.527298218859537,
+      0.17601619341846692
+  ],
+  "group_weights": {
+    "sharpness": 0.25,
+    "artifacts": 0.25,
+    "texture": 0.25,
+    "intensity": 0.25
+  }
+}
