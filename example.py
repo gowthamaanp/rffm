@@ -11,7 +11,7 @@ from pathlib import Path
 
 import cv2
 
-from RFFM.rffm import RFFM
+from rffm import RFFM
 
 
 def load_bgr_image(image_path: Path):

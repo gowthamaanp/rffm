@@ -1,11 +1,11 @@
-# RFFM
+# RFFM: Super-Resolution Quality Assessment via Radiomic Feature Fidelity
 
-RFFM is a reference-based image quality metric for restored images. It compares a predicted image against a target image and returns an overall score in the range `[0, 1]` plus four sub-scores:
+RFFM is a full-reference image quality metric for restored images. It compares a predicted image against a target image and returns an overall score in the range `[0, 1]` plus four sub-scores:
 
-- `rime_sharpness`
-- `rime_artifacts`
-- `rime_texture`
-- `rime_intensity`
+- `rffm_sharpness`
+- `rffm_artifacts`
+- `rffm_texture`
+- `rffm_intensity`
 
 The implementation in this repository expects a single image pair at a time and works with BGR images such as the arrays returned by `cv2.imread()`.
 
@@ -22,10 +22,10 @@ pip install -r requirements.txt
 The quickest way to use RFFM is from Python:
 
 ```python
-from rime import RFFM
+from rffm import RFFM
 
-rime = RFFM()
-scores = rime.score(pred, target)
+rffm = RFFM()
+scores = rffm.score(pred, target)
 
 print(scores.to_dict())
 print(scores.to_array())
@@ -45,11 +45,11 @@ Example output:
 
 ```text
 RFFM scores
-	rime: 0.8231
-	rime_sharpness: 0.7812
-	rime_artifacts: 0.8664
-	rime_texture: 0.8097
-	rime_intensity: 0.8349
+	rffm: 0.8231
+	rffm_sharpness: 0.7812
+	rffm_artifacts: 0.8664
+	rffm_texture: 0.8097
+	rffm_intensity: 0.8349
 ```
 
 ## Notes

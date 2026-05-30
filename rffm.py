@@ -55,7 +55,10 @@ class RFFM:
         for i, feat_name in enumerate(self.feature_names):
             if feat_name not in features:
                 raise ValueError(f"Feature '{feat_name}' not found in extracted features.")
-            feature_array[i] = features[feat_name]
+            value = features[feat_name]
+            if not np.isfinite(value):
+                value = 0.0
+            feature_array[i] = value
         return feature_array
     
     
